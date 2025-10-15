@@ -7,7 +7,12 @@ import FeatureCardOne from '@/components/sections/feature/FeatureCardOne';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBase from '@/components/sections/footer/FooterBase';
 
-const assetMap = /* provided JSON array */;
+const assetMap = {
+  heroImage: "https://images.pexels.com/photos/34234300/pexels-photo-34234300.png?auto=compress&cs=tinysrgb&h=650&w=940",
+  aboutImage: "https://images.pexels.com/photos/34234301/pexels-photo-34234301.png?auto=compress&cs=tinysrgb&h=650&w=940",
+  featureImage: "https://images.pexels.com/photos/11035537/pexels-photo-11035537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  contactImage: "https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+};
 
 const navItems = [
   { name: 'Home', id: 'hero' },
@@ -31,7 +36,7 @@ export default function Home() {
           <HeroBillboard
             title="Welcome to YourAIStartup"
             description="Transform Your Business with Our AI Solutions"
-            imageSrc="https://images.pexels.com/photos/34234300/pexels-photo-34234300.png?auto=compress&cs=tinysrgb&h=650&w=940"
+            imageSrc={assetMap.heroImage}
             className="bg-blue-50 text-gray-900"
             buttons={[
               { text: "Get Started", href: "#feature" },
@@ -52,9 +57,9 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <FeatureCardOne
             features={[
-              { title: "Advanced Analytics", description: "Gain insights with our detailed analytics.", imageSrc: "https://images.pexels.com/photos/11035537/pexels-photo-11035537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
-              { title: "Seamless Integration", description: "Integrate smoothly with your existing systems.", imageSrc: "https://images.pexels.com/photos/11035537/pexels-photo-11035537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
-              { title: "24/7 Support", description: "Get round-the-clock support from our team.", imageSrc: "https://images.pexels.com/photos/11035537/pexels-photo-11035537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" }
+              { title: "Advanced Analytics", description: "Gain insights with our detailed analytics.", imageSrc: assetMap.featureImage },
+              { title: "Seamless Integration", description: "Integrate smoothly with your existing systems.", imageSrc: assetMap.featureImage },
+              { title: "24/7 Support", description: "Get round-the-clock support from our team.", imageSrc: assetMap.featureImage }
             ]}
             className="bg-blue-50 text-gray-900"
           />
@@ -66,7 +71,7 @@ export default function Home() {
             tag="Newsletter"
             title="Stay Informed with Our Newsletter"
             description="Subscribe for updates and exclusive content."
-            imageSrc="https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            imageSrc={assetMap.contactImage}
             className="bg-blue-50 text-gray-900"
           />
         </div>
